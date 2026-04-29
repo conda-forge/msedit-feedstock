@@ -10,12 +10,13 @@ source:
   sha256: f35da309c5f3d92b10e5c4b2267e4d5e29d809b2aa460e80326b11f7feba72a5
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
       CARGO_PROFILE_RELEASE_LTO: fat
       RUSTC_BOOTSTRAP: 1
+      EDIT_CFG_LANGUAGES: en,zh_hans
     content:
       - if: unix
         then:
